@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import MonthList from '../MonthList/MonthList';
 
 class App extends Component {
   state = {
@@ -34,9 +35,6 @@ class App extends Component {
   }
 
   render() {
-    const newMonthList = this.state.monthList.map((month, id) => {
-      return <div>{month.name}</div>;
-    });
     return (
       <div className="App">
         <header className="App-header">
@@ -45,7 +43,10 @@ class App extends Component {
           <br />
         </header>
         <br />
-        <p>{newMonthList}</p>
+        <MonthList
+          monthList={this.state.monthList}
+          getCalendar={this.getCalendar}
+        />
       </div>
     );
   }
