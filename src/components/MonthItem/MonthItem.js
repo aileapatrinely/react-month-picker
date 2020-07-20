@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class MonthItem extends Component {
   state = {
     clicked: true,
+    clickedMonth: '',
   };
   sendAlert = (event) => {
     this.setState({
@@ -15,7 +16,11 @@ class MonthItem extends Component {
   };
 
   render() {
-    return <p onClick={this.sendAlert}>{this.props.month.name}</p>;
+    return (
+      <p selectedMonth={this.state.clickedMonth} onClick={this.sendAlert}>
+        {this.props.month.name}
+      </p>
+    );
   }
 }
 

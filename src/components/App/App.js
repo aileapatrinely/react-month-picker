@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import MonthList from '../MonthList/MonthList';
 import MonthItem from '../MonthItem/MonthItem';
+import Header from '../Header/Header';
 
 class App extends Component {
   state = {
@@ -38,11 +39,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Select a Month</h1>
-          <h3>SELECTED MONTH GOES HERE</h3>
-          <br />
-        </header>
+        <Header />
         <br />
         <MonthList
           monthList={this.state.monthList}
