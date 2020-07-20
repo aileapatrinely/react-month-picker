@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class MonthItem extends Component {
   render() {
-    return <div>Yup.</div>;
+    return <div>{this.props.month.name}</div>;
   }
 }
 

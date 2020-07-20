@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import MonthList from '../MonthList/MonthList';
+import MonthItem from '../MonthItem/MonthItem';
 
 class App extends Component {
   state = {
