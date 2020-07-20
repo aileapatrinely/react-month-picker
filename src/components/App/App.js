@@ -34,6 +34,9 @@ class App extends Component {
   }
 
   render() {
+    const newMonthList = this.state.monthList.map((month, id) => {
+      return <div>{month.name}</div>;
+    });
     return (
       <div className="App">
         <header className="App-header">
@@ -42,7 +45,7 @@ class App extends Component {
           <br />
         </header>
         <br />
-        <p>{this.monthList}</p>
+        <p>{newMonthList}</p>
       </div>
     );
   }
